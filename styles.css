@@ -96,8 +96,8 @@ df-messenger {
   --df-messenger-font-color: #333; /* Texte en noir */
   --df-messenger-send-icon: #4CAF50; /* Icône d'envoi en vert */
   --df-messenger-user-message: #4CAF50; /* Messages de l'utilisateur en vert */
-  --df-messenger-bot-message: #333; /* Messages du bot en noir */
-  --df-messenger-bot-message-background: #fff; /* Fond des bulles du bot en blanc */
+  --df-messenger-bot-message: #FFFFFF; /* Messages du bot en noir */
+  --df-messenger-bot-message-background: #FFFFFF; /* Fond des bulles du bot en blanc */
   --df-messenger-chat-border-radius: 10px; /* Bordure arrondie de la fenêtre de chat */
 }
 
