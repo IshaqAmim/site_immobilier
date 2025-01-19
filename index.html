@@ -6,7 +6,18 @@
   <title>Site Immobilier de Test</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Intégration du widget Dialogflow -->
-	<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+	<!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>  -->
+        <script
+		  id="df-messenger-js"
+		  type="text/javascript"
+		  src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"
+		  data-website-id="VOTRE_SITE_ID"
+		  data-chat-title="Support"
+		  data-chat-icon="/images/votre-icone.png"   <!-- Votre nouvelle icône -->
+		  data-chat-height="500"
+		  data-chat-width="400"></script>
+
+	
 	<df-messenger
 	  intent="WELCOME"
 	  chat-title="ChatbotImmobilier"
