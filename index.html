@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -6,13 +6,13 @@
   <title>Site Immobilier de Test</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Intégration du widget Dialogflow -->
-	<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-	<df-messenger
-	  intent="WELCOME"
-	  chat-title="ChatbotImmobilier"
-	  agent-id="38cf4928-cd7e-4469-9d0a-4e5302b2a842"
-	  language-code="fr"
-	></df-messenger>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="ChatbotImmobilier"
+    agent-id="VOTRE_AGENT_ID" <!-- Remplacez par votre Agent ID -->
+    language-code="fr"
+  ></df-messenger>
 </head>
 <body>
   <header>
@@ -41,5 +41,19 @@
   <footer>
     <p>&copy; 2023 Site Immobilier de Test. Tous droits réservés.</p>
   </footer>
+
+  <!-- Bouton personnalisé pour ouvrir le chatbot -->
+  <button id="custom-chat-button">
+    <img src="votre-icone.png" alt="Ouvrir le chat" width="30" height="30">
+  </button>
+
+  <!-- Script pour gérer le bouton personnalisé -->
+  <script>
+    document.getElementById('custom-chat-button').addEventListener('click', function() {
+      const dfMessenger = document.querySelector('df-messenger');
+      dfMessenger.render(); // Afficher le chatbot
+      dfMessenger.shadowRoot.querySelector('df-messenger-chat').open(); // Ouvrir la fenêtre de chat
+    });
+  </script>
 </body>
 </html>
