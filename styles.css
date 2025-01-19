@@ -1,26 +1,127 @@
-/* Masquer le bouton Dialogflow par défaut */
-df-messenger {
-  display: none;
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Styles pour le bouton personnalisé */
-#custom-chat-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #4CAF50; /* Couleur de fond */
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Fond gris clair pour le corps de la page */
+  color: #333; /* Texte principal en gris foncé */
+}
+
+/* Header */
+header {
+  background-color: #333; /* Fond noir pour le header */
+  color: #fff; /* Texte en blanc pour le header */
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+.property-list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
-#custom-chat-button img {
-  width: 30px;
-  height: 30px;
+.property {
+  background-color: #fff; /* Fond blanc pour chaque propriété */
+  border: 1px solid #ddd; /* Bordure grise pour chaque propriété */
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+.property img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.property h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #4CAF50; /* Titre de la propriété en vert */
+}
+
+.property p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #555; /* Texte secondaire en gris moyen */
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Fond noir pour le footer */
+  color: #fff; /* Texte en blanc pour le footer */
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+/* Styles pour le chatbot Dialogflow */
+df-messenger {
+  --df-messenger-button-titlebar-color: #4CAF50; /* Barre de titre du chatbot en vert */
+  --df-messenger-button-color: #4CAF50; /* Bouton du chatbot en vert */
+  --df-messenger-chat-background-color: #f1f1f1; /* Fond de la fenêtre de chat en gris clair */
+  --df-messenger-font-color: #333; /* Texte en noir */
+  --df-messenger-send-icon: #4CAF50; /* Icône d'envoi en vert */
+  --df-messenger-user-message: #4CAF50; /* Messages de l'utilisateur en vert */
+  --df-messenger-bot-message: #FFFFFF; /* Messages du bot en noir */
+  --df-messenger-bot-message-background: #FFFFFF; /* Fond des bulles du bot en blanc */
+  --df-messenger-chat-border-radius: 10px; /* Bordure arrondie de la fenêtre de chat */
+}
+
+/* Styles supplémentaires pour améliorer la lisibilité */
+df-messenger {
+  --df-messenger-message-font-size: 14px; /* Taille de la police des messages */
+  --df-messenger-message-padding: 10px; /* Espacement interne des messages */
+  --df-messenger-message-border-radius: 8px; /* Bordure arrondie des messages */
+}
+
+/* Animation pour le bouton du chatbot */
+df-messenger {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
