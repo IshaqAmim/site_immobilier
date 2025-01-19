@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Immobilier de Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Intégration du widget Dialogflow -->
+	<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+	<df-messenger
+	  intent="WELCOME"
+	  chat-title="ChatbotImmobilier"
+	  agent-id="38cf4928-cd7e-4469-9d0a-4e5302b2a842"
+	  language-code="fr"
+	></df-messenger>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur Notre Site Immobilier</h1>
+    <p>Trouvez la maison de vos rêves !</p>
+  </header>
+
+  <main>
+    <section class="property-list">
+      <div class="property">
+        <img src="https://via.placeholder.com/300x200" alt="Maison 1">
+        <h2>Maison Moderne</h2>
+        <p>4 chambres, 3 salles de bain, 200 m²</p>
+        <p>Prix : 300 000 €</p>
+      </div>
+
+      <div class="property">
+        <img src="https://via.placeholder.com/300x200" alt="Appartement 1">
+        <h2>Appartement Lumineux</h2>
+        <p>2 chambres, 1 salle de bain, 80 m²</p>
+        <p>Prix : 150 000 €</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Site Immobilier de Test. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.property {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.property img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.property h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #4CAF50;
+}
+
+.property p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+/* Styles pour le chatbot Dialogflow */
+df-messenger {
+  --df-messenger-button-titlebar-color: #4CAF50; /* Couleur de la barre de titre */
+  --df-messenger-button-color: #4CAF50; /* Couleur du bouton de chat */
+  --df-messenger-chat-background-color: #f1f1f1; /* Fond de la fenêtre de chat */
+  --df-messenger-font-color: #333; /* Couleur du texte */
+  --df-messenger-send-icon: #4CAF50; /* Couleur de l'icône d'envoi */
+  --df-messenger-user-message: #4CAF50; /* Couleur des messages de l'utilisateur */
+  --df-messenger-bot-message: #333; /* Couleur des messages du bot */
+  --df-messenger-chat-border-radius: 10px; /* Bordure arrondie */
+}
+
+/* Animation pour le bouton du chatbot */
+df-messenger {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
