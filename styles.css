@@ -1,133 +1,100 @@
-/* Reset de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Style général de la page */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4; /* Fond gris clair pour le corps de la page */
-  color: #333; /* Texte principal en gris foncé */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
+/* En-tête */
 header {
-  background-color: #333; /* Fond noir pour le header */
-  color: #fff; /* Texte en blanc pour le header */
+  background-color: #333;
+  color: white;
   padding: 20px;
   text-align: center;
 }
 
-header h1 {
-  margin-bottom: 10px;
-  font-size: 2.5em;
-}
-
-header p {
-  font-size: 1.2em;
-}
-
-/* Main Content */
-main {
-  padding: 20px;
-}
-
+/* Liste des propriétés */
 .property-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 .property {
-  background-color: #fff; /* Fond blanc pour chaque propriété */
-  border: 1px solid #ddd; /* Bordure grise pour chaque propriété */
-  border-radius: 8px;
-  padding: 15px;
-  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.property:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+  width: 45%;
 }
 
 .property img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .property h2 {
+  font-size: 1.5rem;
   margin: 10px 0;
-  font-size: 1.5em;
-  color: #4CAF50; /* Titre de la propriété en vert */
 }
 
 .property p {
-  margin: 5px 0;
-  font-size: 1em;
-  color: #555; /* Texte secondaire en gris moyen */
+  font-size: 1rem;
+  color: #555;
 }
 
 /* Footer */
 footer {
-  background-color: #333; /* Fond noir pour le footer */
-  color: #fff; /* Texte en blanc pour le footer */
+  background-color: #333;
+  color: white;
   text-align: center;
   padding: 10px;
-  margin-top: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
-footer p {
-  font-size: 0.9em;
-}
-
-/* Styles pour le chatbot Dialogflow */
-df-messenger {
-  --df-messenger-button-titlebar-color: #4CAF50; /* Barre de titre du chatbot en vert */
-  --df-messenger-button-color: #4CAF50; /* Bouton du chatbot en vert */
-  --df-messenger-chat-background-color: #f1f1f1; /* Fond de la fenêtre de chat en gris clair */
-  --df-messenger-font-color: #333; /* Texte en noir */
-  --df-messenger-send-icon: #4CAF50; /* Icône d'envoi en vert */
-  --df-messenger-user-message: #4CAF50; /* Messages de l'utilisateur en vert */
-  --df-messenger-bot-message: #FFFFFF; /* Messages du bot en noir */
-  --df-messenger-bot-message-background: #FFFFFF; /* Fond des bulles du bot en blanc */
-  --df-messenger-chat-border-radius: 10px; /* Bordure arrondie de la fenêtre de chat */
-  --df-messenger-message-font-size: 14px; /* Taille de la police des messages */
-  --df-messenger-message-padding: 10px; /* Espacement interne des messages */
-  --df-messenger-message-border-radius: 8px; /* Bordure arrondie des messages */
+/* Personnalisation du bouton flottant du chatbot */
+#df-messenger {
+  position: fixed;
+  bottom: 20px; /* Positionner à 20px du bas */
+  right: 20px; /* Positionner à 20px de la droite */
+  z-index: 1000; /* Assurer que le bouton flotte au-dessus des autres éléments */
 }
 
 /* Personnalisation de l'icône du chatbot */
-df-messenger .df-messenger-fab {
-  background: url('images/votre-icone.png') no-repeat center center; /* Chemin vers votre icône personnalisée */
-  background-size: cover; /* Ajuster la taille de l'icône */
-  border-radius: 50%; /* Conserver un bouton rond */
+.df-chat-icon {
+  width: 50px; /* Taille de l'icône */
+  height: 50px; /* Taille de l'icône */
+  border-radius: 50%; /* Assurer que l'icône soit circulaire */
+  background-color: transparent; /* Fond transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
 }
 
-df-messenger .df-messenger-fab .fab-icon {
-  display: none; /* Supprimer l'icône par défaut */
+/* Image de l'icône (ajustée en fonction de votre icône personnalisée) */
+.df-chat-icon img {
+  width: 40px; /* Ajuster la taille de l'icône */
+  height: 40px; /* Ajuster la taille de l'icône */
+  border-radius: 50%; /* Assurer que l'image soit aussi ronde */
 }
 
-/* Animation pour le bouton du chatbot */
-df-messenger {
-  animation: pulse 2s infinite;
+/* Personnalisation de la fenêtre du chatbot */
+#df-messenger .df-message {
+  font-family: Arial, sans-serif; /* Police de caractères */
+  font-size: 14px; /* Taille de la police */
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+/* Personnalisation de la fenêtre du chatbot */
+#df-messenger .df-messenger-window {
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Ombre autour du widget */
+  max-width: 400px; /* Largeur maximale */
+  height: 500px; /* Hauteur maximale */
 }
