@@ -92,9 +92,9 @@ footer p {
 df-messenger {
   --df-messenger-button-titlebar-color: #4CAF50; /* Couleur de la barre de titre */
   --df-messenger-button-color: #4CAF50; /* Couleur du bouton de chat */
-  --df-messenger-chat-background-color: #f1f1f1; /* Fond de la fenêtre de chat */
-  --df-messenger-font-color: #333; /* Couleur du texte */
-  --df-messenger-send-icon: #4CAF50; /* Couleur de l'icône d'envoi */
+  --df-messenger-chat-background-color: #f1f1f1; /* Fond de la fenÃªtre de chat */
+  --df-messenger-font-color: white; /* Couleur du texte */
+  --df-messenger-send-icon: #4CAF50; /* Couleur de l'icÃ´ne d'envoi */
   --df-messenger-user-message: #4CAF50; /* Couleur des messages de l'utilisateur */
   --df-messenger-bot-message: #333; /* Couleur des messages du bot */
   --df-messenger-chat-border-radius: 10px; /* Bordure arrondie */
