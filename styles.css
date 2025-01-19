@@ -1,4 +1,3 @@
-
 /* Reset de base */
 * {
   margin: 0;
@@ -100,13 +99,20 @@ df-messenger {
   --df-messenger-bot-message: #FFFFFF; /* Messages du bot en noir */
   --df-messenger-bot-message-background: #FFFFFF; /* Fond des bulles du bot en blanc */
   --df-messenger-chat-border-radius: 10px; /* Bordure arrondie de la fenêtre de chat */
-}
-
-/* Styles supplémentaires pour améliorer la lisibilité */
-df-messenger {
   --df-messenger-message-font-size: 14px; /* Taille de la police des messages */
   --df-messenger-message-padding: 10px; /* Espacement interne des messages */
   --df-messenger-message-border-radius: 8px; /* Bordure arrondie des messages */
+}
+
+/* Personnalisation de l'icône du chatbot */
+df-messenger .df-messenger-fab {
+  background: url('images/votre-icone.png') no-repeat center center; /* Chemin vers votre icône personnalisée */
+  background-size: cover; /* Ajuster la taille de l'icône */
+  border-radius: 50%; /* Conserver un bouton rond */
+}
+
+df-messenger .df-messenger-fab .fab-icon {
+  display: none; /* Supprimer l'icône par défaut */
 }
 
 /* Animation pour le bouton du chatbot */
