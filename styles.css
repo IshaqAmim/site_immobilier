@@ -67,7 +67,7 @@ footer {
 }
 
 /* Personnalisation de l'icône du chatbot */
-.df-chat-icon {
+#df-messenger .df-chat-icon {
   width: 50px; /* Taille de l'icône */
   height: 50px; /* Taille de l'icône */
   border-radius: 50%; /* Assurer que l'icône soit circulaire */
@@ -78,8 +78,8 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
 }
 
-/* Image de l'icône (ajustée en fonction de votre icône personnalisée) */
-.df-chat-icon img {
+/* Image de l'icône personnalisée */
+#df-messenger .df-chat-icon img {
   width: 40px; /* Ajuster la taille de l'icône */
   height: 40px; /* Ajuster la taille de l'icône */
   border-radius: 50%; /* Assurer que l'image soit aussi ronde */
